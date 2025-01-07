@@ -1,4 +1,4 @@
-import  { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import VideoPlayer from "../components/VideoPlayer";
 import Grid from "@mui/material/Grid2";
 import TextField from "@mui/material/TextField";
@@ -13,19 +13,19 @@ const AllVideosPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const videosPerPage = 6;
 
-   useEffect(() => {
-     const loadVideos = async () => {
-       try {
-         const fetchedVideos = await fetchVideos();
-         setVideos(fetchedVideos);
-         setFilteredVideos(fetchedVideos);
-       } catch (error) {
-         console.error("Error fetching videos:", error);
-       }
-     };
+  useEffect(() => {
+    const loadVideos = async () => {
+      try {
+        const fetchedVideos = await fetchVideos();
+        setVideos(fetchedVideos);
+        setFilteredVideos(fetchedVideos);
+      } catch (error) {
+        console.error("Error fetching videos:", error);
+      }
+    };
 
-     loadVideos();
-   }, []);
+    loadVideos();
+  }, []);
 
   useEffect(() => {
     setFilteredVideos(
@@ -57,11 +57,13 @@ const AllVideosPage = () => {
         sx={{
           marginLeft: "16px",
           "& .MuiOutlinedInput-root": {
+            backgroundColor: "white",
             "&.Mui-focused fieldset": {
               borderColor: "var(--primary-color)",
             },
           },
           "& .MuiInputLabel-root": {
+            color: "var(--primary-color)",
             "&.Mui-focused": {
               color: "var(--primary-color)",
             },

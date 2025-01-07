@@ -1,6 +1,6 @@
 :root {
   --primary-color:rgb(175, 129, 224); /* Your app's primary color */
-  --secondary-color: #000000; /* Secondary color */
+  --secondary-color:rgb(220, 215, 215); /* Secondary color */
   --text-color: #fffcfc; /* Text color */
   font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
